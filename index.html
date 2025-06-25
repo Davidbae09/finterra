@@ -1,0 +1,1847 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FinTerra - FinTerra page</title>
+  <style>
+    .product {
+  padding: 60px 0;
+  background-color: #f9f9f9;
+}
+
+.product .section-title {
+  text-align: center;
+  margin-bottom: 20px;
+  font-family: 'Mulish', sans-serif;
+  font-weight: 900;
+  color: #333;
+}
+
+.product .section-subtitle {
+  text-align: center;
+  margin-bottom: 40px;
+  font-family: 'Quicksand', sans-serif;
+  color: #666;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+}
+
+.product-card {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+}
+
+.product-image img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.product-info {
+  padding: 20px;
+  text-align: center;
+}
+
+.product-title {
+  font-family: 'Mulish', sans-serif;
+  font-weight: 700;
+  font-size: 1.5rem;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.product-desc {
+  font-family: 'Quicksand', sans-serif;
+  color: #666;
+  margin-bottom: 15px;
+}
+
+.product-price {
+  font-family: 'Mulish', sans-serif;
+  font-weight: 600;
+  color: #2c7be5;
+  margin-bottom: 20px;
+}
+
+.product-info .btn-primary {
+  display: inline-block;
+  padding: 10px 20px;
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 600;
+  color: #fff;
+  background-color: #2c7be5;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.product-info .btn-primary:hover {
+  background-color: #1a5bb8;
+}
+.latest-news {
+  padding: 60px 0;
+  background-color: #fff;
+}
+
+.latest-news .section-title {
+  text-align: center;
+  margin-bottom: 20px;
+  font-family: 'Mulish', sans-serif;
+  font-weight: 900;
+  color: #333;
+}
+
+.latest-news .section-subtitle {
+  text-align: center;
+  margin-bottom: 40px;
+  font-family: 'Quicksand', sans-serif;
+  color: #666;
+}
+
+.news-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+}
+
+.news-card {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.news-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+.news-image img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.news-info {
+  padding: 20px;
+}
+
+.news-meta {
+  display: flex;
+  justify-content: space-between;
+  font-family: 'Quicksand', sans-serif;
+  font-size: 0.9rem;
+  color: #888;
+  margin-bottom: 10px;
+}
+
+.news-meta span {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.news-title {
+  font-family: 'Mulish', sans-serif;
+  font-weight: 700;
+  font-size: 1.5rem;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.news-desc {
+  font-family: 'Quicksand', sans-serif;
+  color: #666;
+  margin-bottom: 15px;
+}
+
+.news-info .btn-outline {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 8px 16px;
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 600;
+  color: #2c7be5;
+  border: 2px solid #2c7be5;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.news-info .btn-outline:hover {
+  background-color: #2c7be5;
+  color: #fff;
+}
+  </style>
+
+  <!-- 
+    - favicon
+  -->
+  <link rel="shortcut icon" href="./llogo.png" type="image/svg+xml">
+
+  <!-- 
+    - custom css link
+  -->
+  <link rel="stylesheet" href="./assets/css/style.css">
+
+  <!-- 
+    - google font link
+  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Mulish:wght@600;700;900&family=Quicksand:wght@400;500;600;700&display=swap"
+    rel="stylesheet">
+</head>
+
+<body>
+
+  <!-- 
+    - HEADER
+  -->
+
+  <header class="header" data-header>
+    <div class="container">
+
+      <a href="#" class="logo">
+        <img src="./assets/images/llogo.PNG" alt="FinTerra logo" style="width: 50px; height: auto;">
+      </a>
+      
+
+      <button class="menu-toggle-btn" data-nav-toggle-btn>
+        <ion-icon name="menu-outline"></ion-icon>
+      </button>
+
+      <nav class="navbar">
+        <ul class="navbar-list">
+
+          <li>
+            <a href="#hero" class="navbar-link">Home</a>
+          </li>
+
+          <li>
+            <a href="#features" class="navbar-link">Features</a>
+          </li>
+
+          <li>
+            <a href="#" class="navbar-link">Pricing</a>
+          </li>
+          <li>
+            <a href="#Product" class="navbar-link">Product</a>
+          </li>
+
+          <li>
+            <a href="#blog" class="navbar-link">Blog</a>
+          </li>
+
+          <li>
+            <a href="#contact" class="navbar-link">Contact Us</a>
+          </li>
+
+        </ul>
+
+      </nav>
+
+    </div>
+  </header>
+
+
+
+
+
+  <main>
+    <article>
+
+      <!-- 
+        - HERO
+      -->
+
+      <section class="hero" id="hero">
+        <div class="container">
+
+          <div class="hero-content">
+            <h1 class="h1 hero-title">FinTerra</h1>
+
+            <p class="hero-text">
+              Teknologi & Peluang Akuakultur Masa Kini
+            </p>
+
+            <p class="form-text">
+              <span>🥳</span> Dukung pertumbuhan usaha budidaya kamu dengan informasi, inovasi terbaru, dan akses ke pasar ekspor.
+            </p>
+
+            <form action="" class="hero-form">
+              <input type="email" name="email" required placeholder="Enter Your Email" class="email-field">
+
+              <button type="submit" class="btn btn-primary">Subscribe</button>
+            </form>
+          </div>
+
+          <figure class="hero-banner">
+            <img src="./assets/images/hero-banner.png" alt="Hero image">
+          </figure>
+
+        </div>
+      </section>
+
+
+
+
+
+      <!-- 
+        - ABOUT
+      -->
+
+      <section class="about">
+        <div class="container">
+      
+          <div class="about-content">
+      
+            <div class="about-icon">
+              <ion-icon name="cube"></ion-icon>
+            </div>
+      
+            <h2 class="h2 about-title">Kenapa Memilih FinTerra?</h2>
+      
+            <p class="about-text">
+              FinTerra mendukung UMKM akuakultur dengan solusi teknologi budidaya terkini, keamanan data, dan akses pasar ekspor yang luas.
+            </p>
+      
+            <button class="btn btn-outline">Pelajari Lebih Lanjut</button>
+      
+          </div>
+      
+          <ul class="about-list">
+      
+            <li>
+              <div class="about-card">
+      
+                <div class="card-icon">
+                  <ion-icon name="thumbs-up"></ion-icon>
+                </div>
+      
+                <h3 class="h3 card-title">Mudah Digunakan</h3>
+      
+                <p class="card-text">
+                  Platform ramah pengguna dari pemula hingga eksportir berpengalaman.
+                </p>
+      
+              </div>
+            </li>
+      
+            <li>
+              <div class="about-card">
+      
+                <div class="card-icon">
+                  <ion-icon name="trending-up"></ion-icon>
+                </div>
+      
+                <h3 class="h3 card-title">Naikkan Pendapatan</h3>
+      
+                <p class="card-text">
+                  Analisis tren pasar dan peluang ekspor dalam satu dashboard.
+                </p>
+      
+              </div>
+            </li>
+      
+            <li>
+              <div class="about-card">
+      
+                <div class="card-icon">
+                  <ion-icon name="shield-checkmark"></ion-icon>
+                </div>
+      
+                <h3 class="h3 card-title">Keamanan Data</h3>
+      
+                <p class="card-text">
+                  Data budidaya Anda aman dan dienkripsi dengan standar tinggi.
+                </p>
+      
+              </div>
+            </li>
+      
+            <li>
+              <div class="about-card">
+      
+                <div class="card-icon">
+                  <ion-icon name="server"></ion-icon>
+                </div>
+      
+                <h3 class="h3 card-title">Privasi Terjamin</h3>
+      
+                <p class="card-text">
+                  Informasi Anda tidak dijual atau dibagikan ke pihak ketiga.
+                </p>
+      
+              </div>
+            </li>
+      
+          </ul>
+      
+        </div>
+      </section>
+      
+
+
+
+
+
+      <!-- 
+        - FEATURES
+      -->
+
+      <section class="features" id="features">
+        <div class="container">
+
+          <h2 class="h2 section-title">FITUR UNGGULAN</h2>
+
+          <div class="features-wrapper">
+
+            <figure class="features-banner">
+              <img src="./assets/images/features-img-1.png" alt="illustration art">
+            </figure>
+
+            <div class="features-content">
+
+              <p class="features-content-subtitle">
+                <ion-icon name="sparkles"></ion-icon>
+            
+                <span>FITUR UNGGULAN</span>
+              </p>
+            
+              <h3 class="features-content-title">
+                Bangun <strong>komunitas</strong> & dorong <strong>pertumbuhan</strong> dengan fitur <strong>akuakultur digital</strong>
+              </h3>
+            
+              <p class="features-content-text">
+                FinTerra menghadirkan solusi berbasis teknologi untuk meningkatkan efisiensi budidaya, memperluas jaringan pasar, dan mengakselerasi ekspor hasil perikanan.
+              </p>
+            
+              <ul class="features-list">
+            
+                <li class="features-list-item">
+                  <ion-icon name="layers-outline"></ion-icon>
+            
+                  <p>Pantau data budidaya secara real-time dan terintegrasi.</p>
+                </li>
+            
+                <li class="features-list-item">
+                  <ion-icon name="megaphone-outline"></ion-icon>
+            
+                  <p>Promosikan produk Anda langsung ke calon pembeli global.</p>
+                </li>
+            
+              </ul>
+            
+              <div class="btn-group">
+                <button class="btn btn-primary">Pelajari Lebih Lanjut</button>
+            
+                <button class="btn btn-secondary">Mulai Sekarang</button>
+              </div>
+            
+            </div>
+            
+
+            <div class="features-wrapper">
+
+              <figure class="features-banner">
+                <img src="./assets/images/koi.png" alt="Shopping Illustration">
+              </figure>
+            
+              <div class="features-content">
+            
+                <p class="features-content-subtitle">
+                  <ion-icon name="bag-handle-outline"></ion-icon>
+                  <span>SHOPPING FEATURES</span>
+                </p>
+            
+                <h3 class="features-content-title">
+                  Everything you need for <strong>smart aquaculture</strong> is just a click away.
+                </h3>
+            
+                <p class="features-content-text">
+                  Belanja kebutuhan budidaya dari mitra terpercaya FinTerra. Produk berkualitas, harga kompetitif, dan dukungan langsung untuk setiap pembelian Anda.
+                </p>
+            
+                <ul class="features-list">
+            
+                  <li class="features-list-item">
+                    <ion-icon name="cube-outline"></ion-icon>
+                    <p>Produk berkualitas langsung dari supplier resmi.</p>
+                  </li>
+            
+                  <li class="features-list-item">
+                    <ion-icon name="card-outline"></ion-icon>
+                    <p>Metode pembayaran lengkap & transaksi aman.</p>
+                  </li>
+            
+                </ul>
+            
+                <div class="btn-group">
+                  <button class="btn btn-primary">Lihat Katalog</button>
+                  <button class="btn btn-secondary">Ke Keranjang</button>
+                </div>
+            
+              </div>
+            
+            </div>
+            
+      </section>
+
+
+    <!-- 
+      - PRODUCT
+    -->
+
+    <section class="product" id="Product">
+      <div class="container">
+        <h2 class="h2 section-title">Produk Unggulan</h2>
+        <p class="section-subtitle">Temukan kebutuhan akuakultur terbaik untuk mendukung usaha budidaya Anda.</p>
+
+        
+<div class="product-grid">
+
+  <!-- Produk 1 -->
+  <div class="product-card">
+    <figure class="product-image">
+      <img src="./assets/images/feeder.png" alt="Auto Solar Fish Feeder">
+    </figure>
+    <div class="product-info">
+      <h3 class="product-title">Auto Solar Fish Feeder</h3>
+      <p class="product-desc">Feeder otomatis tenaga surya untuk pemberian pakan ikan terjadwal hingga 6x/hari.</p>
+      <p class="product-price">Rp 980.000</p>
+      <a href="https://shopee.co.id/product/166354165/23264352967" target="_blank" class="btn btn-primary">Beli Sekarang</a>
+    </div>
+  </div>
+
+  <!-- Produk 2 -->
+  <div class="product-card">
+    <figure class="product-image">
+      <img src="./assets/images/meter.png" alt="Smart Water Quality Meter">
+    </figure>
+    <div class="product-info">
+      <h3 class="product-title">Smart Water Quality Meter</h3>
+      <p class="product-desc">Pantau pH, suhu, salinitas, ORP, TDS & lainnya secara realtime via WiFi.</p>
+      <p class="product-price">Rp 1.275.000</p>
+      <a href="https://shopee.co.id/product/15944192/24743758296" target="_blank" class="btn btn-primary">Beli Sekarang</a>
+    </div>
+  </div>
+
+  <!-- Produk 3 -->
+  <div class="product-card">
+    <figure class="product-image">
+      <img src="./assets/images/monitor.png" alt="Underwater Camera Monitor 4.3inch">
+    </figure>
+    <div class="product-info">
+      <h3 class="product-title">Underwater Camera 4.3"</h3>
+      <p class="product-desc">Kamera tahan air resolusi tinggi, cocok untuk memantau dasar kolam budidaya.</p>
+      <p class="product-price">Rp 3.220.500</p>
+      <a href="https://www.tokopedia.com/bosbintang/kamera-pancing-underwater-4-3" target="_blank" class="btn btn-primary">Beli Sekarang</a>
+    </div>
+  </div>
+
+  <!-- Produk 4 -->
+  <div class="product-card">
+    <figure class="product-image">
+      <img src="./assets/images/solar.png" alt="WiFi Solar Auto Feeder">
+    </figure>
+    <div class="product-info">
+      <h3 class="product-title">WiFi Solar Auto Feeder</h3>
+      <p class="product-desc">Feeder otomatis tenaga surya dengan kontrol jarak jauh via WiFi & aplikasi.</p>
+      <p class="product-price">Rp 6.114.528</p>
+      <a href="https://www.tokopedia.com/allsistem/solar-fish-feeder-automatic-feeding-smart-wifi" target="_blank" class="btn btn-primary">Beli Sekarang</a>
+    </div>
+  </div>
+
+</div>
+
+</div>
+</section>
+
+
+      <!-- 
+      - BLOG
+    -->
+
+    <section class="latest-news" id="blog">
+      <div class="container">
+        <h2 class="h2 section-title">Berita & Wawasan Terbaru</h2>
+        <p class="section-subtitle">Update terkini seputar perikanan budidaya, teknologi, dan peluang bisnis bersama FinTerra.</p>
+
+        <div class="news-grid">
+          <!-- Berita Akuakultur -->
+          <div class="news-card">
+            <figure class="news-image">
+              <img src="./assets/images/Berita Akuakultur Terbaru.jpg" alt="Berita Akuakultur">
+            </figure>
+            <div class="news-info">
+              <p class="news-meta">
+                <span>
+                  <ion-icon name="calendar-outline"></ion-icon> April 10, 2025
+                </span>
+                <span>
+                  <ion-icon name="person-outline"></ion-icon> Admin
+                </span>
+              </p>
+              <h3 class="news-title">Berita Akuakultur Terbaru</h3>
+              <p class="news-desc">Pantau perkembangan regulasi dan tren pasar perikanan budidaya di Indonesia dan global.</p>
+              <a href="#" class="btn btn-outline">Selengkapnya <ion-icon name="arrow-forward-outline"></ion-icon></a>
+            </div>
+          </div>
+
+          <!-- Teknologi Budidaya -->
+          <div class="news-card">
+            <figure class="news-image">
+              <img src="./assets/images/Teknologi-Sistem-Resirkulasi-mollyjaya.id_.webp" alt="Teknologi Budidaya Terkini">
+            </figure>
+            <div class="news-info">
+              <p class="news-meta">
+                <span>
+                  <ion-icon name="calendar-outline"></ion-icon> April 10, 2025
+                </span>
+                <span>
+                  <ion-icon name="person-outline"></ion-icon> Admin
+                </span>
+              </p>
+              <h3 class="news-title">Teknologi Budidaya Terkini</h3>
+              <p class="news-desc">Kenali perangkat IoT, sensor kualitas air, dan sistem otomatisasi terbaru untuk tambak pintar.</p>
+              <a href="#" class="btn btn-outline">Selengkapnya <ion-icon name="arrow-forward-outline"></ion-icon></a>
+            </div>
+          </div>
+
+          <!-- Peluang Bisnis -->
+          <div class="news-card">
+            <figure class="news-image">
+              <img src="./assets/images/Peluang-Usaha-Budidaya-Ikan-Koi-Dan-Analisa-Usahanya.jpg" alt="Peluang Bisnis Perikanan">
+            </figure>
+            <div class="news-info">
+              <p class="news-meta">
+                <span>
+                  <ion-icon name="calendar-outline"></ion-icon> April 10, 2025
+                </span>
+                <span>
+                  <ion-icon name="person-outline"></ion-icon> Admin
+                </span>
+              </p>
+              <h3 class="news-title">Peluang Bisnis Perikanan</h3>
+              <p class="news-desc">Eksplorasi kemitraan, ekspor hasil panen, dan ide usaha dari UMKM hingga korporasi.</p>
+              <a href="#" class="btn btn-outline">Selengkapnya <ion-icon name="arrow-forward-outline"></ion-icon></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+      
+
+
+
+
+      <!-- 
+        - CONTACT
+      -->
+
+      <section class="contact" id="contact">
+        <div class="container">
+
+          <h2 class="h2 section-title">Contact Us</h2>
+
+          <p class="section-text">
+            Et harum quidem rerum facilis est et expedita distinctio nam libero tempore cum soluta nobis eligendi
+            cumque.
+          </p>
+
+          <div class="contact-wrapper">
+
+            <form action="" class="contact-form">
+
+              <div class="wrapper-flex">
+
+                <div class="input-wrapper">
+                  <label for="name">Name*</label>
+
+                  <input type="text" name="name" id="name" required placeholder="Enter Your Name" class="input-field">
+                </div>
+
+                <div class="input-wrapper">
+                  <label for="emai">Email*</label>
+
+                  <input type="text" name="email" id="email" required placeholder="Enter Your Email"
+                    class="input-field">
+                </div>
+
+              </div>
+
+              <label for="message">Message*</label>
+
+              <textarea name="message" id="message" required placeholder="Type Your Message"
+                class="input-field"></textarea>
+
+              <button type="submit" class="btn btn-primary">
+                <span>Send Message</span>
+
+                <ion-icon name="paper-plane-outline"></ion-icon>
+              </button>
+
+            </form>
+
+            <ul class="contact-list">
+
+              <li>
+                <a href="mailto:support@website.com" class="contact-link">
+                  <ion-icon name="mail-outline"></ion-icon>
+
+                  <span>: support@website.com</span>
+                </a>
+              </li>
+
+              <li>
+                <a href="#" class="contact-link">
+                  <ion-icon name="globe-outline"></ion-icon>
+
+                  <span>: www.website.com</span>
+                </a>
+              </li>
+
+              <li>
+                <a href="tel:+0011234567890" class="contact-link">
+                  <ion-icon name="call-outline"></ion-icon>
+
+                  <span>: (+001) 123 456 7890</span>
+                </a>
+              </li>
+
+              <li>
+                <div class="contact-link">
+                  <ion-icon name="time-outline"></ion-icon>
+
+                  <span>: 9:00 AM - 6:00 PM</span>
+                </div>
+              </li>
+
+              <li>
+                <a href="#" class="contact-link">
+                  <ion-icon name="location-outline"></ion-icon>
+
+                  <address>: 1644 Deer Ridge Drive Rochelle Park, NJ 07662</address>
+                </a>
+              </li>
+
+            </ul>
+
+          </div>
+
+        </div>
+      </section>
+
+    </article>
+  </main>
+
+
+
+
+
+  <!-- 
+    - FOOTER
+  -->
+
+  <footer>
+
+    <div class="footer-top">
+      <div class="container">
+
+        <div class="footer-brand">
+
+          <a href="#" class="logo">
+            <img src="./assets/images/logo-footer.svg" alt="Landio logo">
+          </a>
+
+          <p class="footer-text">
+            Cras ultricies mi eu turpis sit hendrerit fringilla vestibulum ante ipsum primis in faucibus ultrices
+            posuere cubilia.
+          </p>
+
+          <ul class="social-list">
+
+            <li>
+              <a href="#" class="social-link">
+                <ion-icon name="logo-facebook"></ion-icon>
+              </a>
+            </li>
+
+            <li>
+              <a href="#" class="social-link">
+                <ion-icon name="logo-twitter"></ion-icon>
+              </a>
+            </li>
+
+            <li>
+              <a href="#" class="social-link">
+                <ion-icon name="logo-instagram"></ion-icon>
+              </a>
+            </li>
+
+            <li>
+              <a href="#" class="social-link">
+                <ion-icon name="logo-linkedin"></ion-icon>
+              </a>
+            </li>
+
+          </ul>
+
+        </div>
+
+        <div class="footer-link-box">
+
+          <ul class="footer-list">
+
+            <li>
+              <p class="footer-item-title">ABOUT US</p>
+            </li>
+
+            <li>
+              <a href="#" class="footer-link">Works</a>
+            </li>
+
+            <li>
+              <a href="#" class="footer-link">Strategy</a>
+            </li>
+
+            <li>
+              <a href="#" class="footer-link">Releases</a>
+            </li>
+
+            <li>
+              <a href="#" class="footer-link">Press</a>
+            </li>
+
+            <li>
+              <a href="#" class="footer-link">Mission</a>
+            </li>
+
+          </ul>
+
+          <ul class="footer-list">
+
+            <li>
+              <p class="footer-item-title">CUSTOMERS</p>
+            </li>
+
+            <li>
+              <a href="#" class="footer-link">Tranding</a>
+            </li>
+
+            <li>
+              <a href="#" class="footer-link">Popular</a>
+            </li>
+
+            <li>
+              <a href="#" class="footer-link">Customers</a>
+            </li>
+
+            <li>
+              <a href="#" class="footer-link">Features</a>
+            </li>
+
+          </ul>
+
+          <ul class="footer-list">
+
+            <li>
+              <p class="footer-item-title">SUPPORT</p>
+            </li>
+
+            <li>
+              <a href="#" class="footer-link">Developers</a>
+            </li>
+
+            <li>
+              <a href="#" class="footer-link">Support</a>
+            </li>
+
+            <li>
+              <a href="#" class="footer-link">Customer Service</a>
+            </li>
+
+            <li>
+              <a href="#" class="footer-link">Get Started</a>
+            </li>
+
+            <li>
+              <a href="#" class="footer-link">Guide</a>
+            </li>
+
+          </ul>
+
+        </div>
+
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container">
+        <p class="copyright">
+          &copy; 2022 <a href="">codewithsadee</a>. All Right Reserved
+        </p>
+      </div>
+    </div>
+
+  </footer>
+
+
+
+
+
+  <!-- 
+    - custom js link
+  -->
+  <script src="./assets/js/script.js"></script>
+
+  <!-- 
+    - ionicon link
+  -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+</body>
+
+</html><!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FinTerra - FinTerra page</title>
+  <style>
+    .product {
+  padding: 60px 0;
+  background-color: #f9f9f9;
+}
+
+.product .section-title {
+  text-align: center;
+  margin-bottom: 20px;
+  font-family: 'Mulish', sans-serif;
+  font-weight: 900;
+  color: #333;
+}
+
+.product .section-subtitle {
+  text-align: center;
+  margin-bottom: 40px;
+  font-family: 'Quicksand', sans-serif;
+  color: #666;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+}
+
+.product-card {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+}
+
+.product-image img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.product-info {
+  padding: 20px;
+  text-align: center;
+}
+
+.product-title {
+  font-family: 'Mulish', sans-serif;
+  font-weight: 700;
+  font-size: 1.5rem;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.product-desc {
+  font-family: 'Quicksand', sans-serif;
+  color: #666;
+  margin-bottom: 15px;
+}
+
+.product-price {
+  font-family: 'Mulish', sans-serif;
+  font-weight: 600;
+  color: #2c7be5;
+  margin-bottom: 20px;
+}
+
+.product-info .btn-primary {
+  display: inline-block;
+  padding: 10px 20px;
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 600;
+  color: #fff;
+  background-color: #2c7be5;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.product-info .btn-primary:hover {
+  background-color: #1a5bb8;
+}
+.latest-news {
+  padding: 60px 0;
+  background-color: #fff;
+}
+
+.latest-news .section-title {
+  text-align: center;
+  margin-bottom: 20px;
+  font-family: 'Mulish', sans-serif;
+  font-weight: 900;
+  color: #333;
+}
+
+.latest-news .section-subtitle {
+  text-align: center;
+  margin-bottom: 40px;
+  font-family: 'Quicksand', sans-serif;
+  color: #666;
+}
+
+.news-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+}
+
+.news-card {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.news-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+.news-image img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.news-info {
+  padding: 20px;
+}
+
+.news-meta {
+  display: flex;
+  justify-content: space-between;
+  font-family: 'Quicksand', sans-serif;
+  font-size: 0.9rem;
+  color: #888;
+  margin-bottom: 10px;
+}
+
+.news-meta span {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.news-title {
+  font-family: 'Mulish', sans-serif;
+  font-weight: 700;
+  font-size: 1.5rem;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.news-desc {
+  font-family: 'Quicksand', sans-serif;
+  color: #666;
+  margin-bottom: 15px;
+}
+
+.news-info .btn-outline {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 8px 16px;
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 600;
+  color: #2c7be5;
+  border: 2px solid #2c7be5;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.news-info .btn-outline:hover {
+  background-color: #2c7be5;
+  color: #fff;
+}
+  </style>
+
+  <!-- 
+    - favicon
+  -->
+  <link rel="shortcut icon" href="./llogo.png" type="image/svg+xml">
+
+  <!-- 
+    - custom css link
+  -->
+  <link rel="stylesheet" href="./assets/css/style.css">
+
+  <!-- 
+    - google font link
+  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Mulish:wght@600;700;900&family=Quicksand:wght@400;500;600;700&display=swap"
+    rel="stylesheet">
+</head>
+
+<body>
+
+  <!-- 
+    - HEADER
+  -->
+
+  <header class="header" data-header>
+    <div class="container">
+
+      <a href="#" class="logo">
+        <img src="./assets/images/llogo.PNG" alt="FinTerra logo" style="width: 50px; height: auto;">
+      </a>
+      
+
+      <button class="menu-toggle-btn" data-nav-toggle-btn>
+        <ion-icon name="menu-outline"></ion-icon>
+      </button>
+
+      <nav class="navbar">
+        <ul class="navbar-list">
+
+          <li>
+            <a href="#hero" class="navbar-link">Home</a>
+          </li>
+
+          <li>
+            <a href="#features" class="navbar-link">Features</a>
+          </li>
+
+          <li>
+            <a href="#" class="navbar-link">Pricing</a>
+          </li>
+          <li>
+            <a href="#Product" class="navbar-link">Product</a>
+          </li>
+
+          <li>
+            <a href="#blog" class="navbar-link">Blog</a>
+          </li>
+
+          <li>
+            <a href="#contact" class="navbar-link">Contact Us</a>
+          </li>
+
+        </ul>
+
+      </nav>
+
+    </div>
+  </header>
+
+
+
+
+
+  <main>
+    <article>
+
+      <!-- 
+        - HERO
+      -->
+
+      <section class="hero" id="hero">
+        <div class="container">
+
+          <div class="hero-content">
+            <h1 class="h1 hero-title">FinTerra</h1>
+
+            <p class="hero-text">
+              Teknologi & Peluang Akuakultur Masa Kini
+            </p>
+
+            <p class="form-text">
+              <span>🥳</span> Dukung pertumbuhan usaha budidaya kamu dengan informasi, inovasi terbaru, dan akses ke pasar ekspor.
+            </p>
+
+            <form action="" class="hero-form">
+              <input type="email" name="email" required placeholder="Enter Your Email" class="email-field">
+
+              <button type="submit" class="btn btn-primary">Subscribe</button>
+            </form>
+          </div>
+
+          <figure class="hero-banner">
+            <img src="./assets/images/hero-banner.png" alt="Hero image">
+          </figure>
+
+        </div>
+      </section>
+
+
+
+
+
+      <!-- 
+        - ABOUT
+      -->
+
+      <section class="about">
+        <div class="container">
+      
+          <div class="about-content">
+      
+            <div class="about-icon">
+              <ion-icon name="cube"></ion-icon>
+            </div>
+      
+            <h2 class="h2 about-title">Kenapa Memilih FinTerra?</h2>
+      
+            <p class="about-text">
+              FinTerra mendukung UMKM akuakultur dengan solusi teknologi budidaya terkini, keamanan data, dan akses pasar ekspor yang luas.
+            </p>
+      
+            <button class="btn btn-outline">Pelajari Lebih Lanjut</button>
+      
+          </div>
+      
+          <ul class="about-list">
+      
+            <li>
+              <div class="about-card">
+      
+                <div class="card-icon">
+                  <ion-icon name="thumbs-up"></ion-icon>
+                </div>
+      
+                <h3 class="h3 card-title">Mudah Digunakan</h3>
+      
+                <p class="card-text">
+                  Platform ramah pengguna dari pemula hingga eksportir berpengalaman.
+                </p>
+      
+              </div>
+            </li>
+      
+            <li>
+              <div class="about-card">
+      
+                <div class="card-icon">
+                  <ion-icon name="trending-up"></ion-icon>
+                </div>
+      
+                <h3 class="h3 card-title">Naikkan Pendapatan</h3>
+      
+                <p class="card-text">
+                  Analisis tren pasar dan peluang ekspor dalam satu dashboard.
+                </p>
+      
+              </div>
+            </li>
+      
+            <li>
+              <div class="about-card">
+      
+                <div class="card-icon">
+                  <ion-icon name="shield-checkmark"></ion-icon>
+                </div>
+      
+                <h3 class="h3 card-title">Keamanan Data</h3>
+      
+                <p class="card-text">
+                  Data budidaya Anda aman dan dienkripsi dengan standar tinggi.
+                </p>
+      
+              </div>
+            </li>
+      
+            <li>
+              <div class="about-card">
+      
+                <div class="card-icon">
+                  <ion-icon name="server"></ion-icon>
+                </div>
+      
+                <h3 class="h3 card-title">Privasi Terjamin</h3>
+      
+                <p class="card-text">
+                  Informasi Anda tidak dijual atau dibagikan ke pihak ketiga.
+                </p>
+      
+              </div>
+            </li>
+      
+          </ul>
+      
+        </div>
+      </section>
+      
+
+
+
+
+
+      <!-- 
+        - FEATURES
+      -->
+
+      <section class="features" id="features">
+        <div class="container">
+
+          <h2 class="h2 section-title">FITUR UNGGULAN</h2>
+
+          <div class="features-wrapper">
+
+            <figure class="features-banner">
+              <img src="./assets/images/features-img-1.png" alt="illustration art">
+            </figure>
+
+            <div class="features-content">
+
+              <p class="features-content-subtitle">
+                <ion-icon name="sparkles"></ion-icon>
+            
+                <span>FITUR UNGGULAN</span>
+              </p>
+            
+              <h3 class="features-content-title">
+                Bangun <strong>komunitas</strong> & dorong <strong>pertumbuhan</strong> dengan fitur <strong>akuakultur digital</strong>
+              </h3>
+            
+              <p class="features-content-text">
+                FinTerra menghadirkan solusi berbasis teknologi untuk meningkatkan efisiensi budidaya, memperluas jaringan pasar, dan mengakselerasi ekspor hasil perikanan.
+              </p>
+            
+              <ul class="features-list">
+            
+                <li class="features-list-item">
+                  <ion-icon name="layers-outline"></ion-icon>
+            
+                  <p>Pantau data budidaya secara real-time dan terintegrasi.</p>
+                </li>
+            
+                <li class="features-list-item">
+                  <ion-icon name="megaphone-outline"></ion-icon>
+            
+                  <p>Promosikan produk Anda langsung ke calon pembeli global.</p>
+                </li>
+            
+              </ul>
+            
+              <div class="btn-group">
+                <button class="btn btn-primary">Pelajari Lebih Lanjut</button>
+            
+                <button class="btn btn-secondary">Mulai Sekarang</button>
+              </div>
+            
+            </div>
+            
+
+            <div class="features-wrapper">
+
+              <figure class="features-banner">
+                <img src="./assets/images/koi.png" alt="Shopping Illustration">
+              </figure>
+            
+              <div class="features-content">
+            
+                <p class="features-content-subtitle">
+                  <ion-icon name="bag-handle-outline"></ion-icon>
+                  <span>SHOPPING FEATURES</span>
+                </p>
+            
+                <h3 class="features-content-title">
+                  Everything you need for <strong>smart aquaculture</strong> is just a click away.
+                </h3>
+            
+                <p class="features-content-text">
+                  Belanja kebutuhan budidaya dari mitra terpercaya FinTerra. Produk berkualitas, harga kompetitif, dan dukungan langsung untuk setiap pembelian Anda.
+                </p>
+            
+                <ul class="features-list">
+            
+                  <li class="features-list-item">
+                    <ion-icon name="cube-outline"></ion-icon>
+                    <p>Produk berkualitas langsung dari supplier resmi.</p>
+                  </li>
+            
+                  <li class="features-list-item">
+                    <ion-icon name="card-outline"></ion-icon>
+                    <p>Metode pembayaran lengkap & transaksi aman.</p>
+                  </li>
+            
+                </ul>
+            
+                <div class="btn-group">
+                  <button class="btn btn-primary">Lihat Katalog</button>
+                  <button class="btn btn-secondary">Ke Keranjang</button>
+                </div>
+            
+              </div>
+            
+            </div>
+            
+      </section>
+
+
+    <!-- 
+      - PRODUCT
+    -->
+
+    <section class="product" id="Product">
+      <div class="container">
+        <h2 class="h2 section-title">Produk Unggulan</h2>
+        <p class="section-subtitle">Temukan kebutuhan akuakultur terbaik untuk mendukung usaha budidaya Anda.</p>
+
+        
+<div class="product-grid">
+
+  <!-- Produk 1 -->
+  <div class="product-card">
+    <figure class="product-image">
+      <img src="./assets/images/foto.png" alt="Auto Solar Fish Feeder">
+    </figure>
+    <div class="product-info">
+      <h3 class="product-title">Auto Solar Fish Feeder</h3>
+      <p class="product-desc">Feeder otomatis tenaga surya untuk pemberian pakan ikan terjadwal hingga 6x/hari.</p>
+      <p class="product-price">Rp 980.000</p>
+      <a href="https://shopee.co.id/product/166354165/23264352967" target="_blank" class="btn btn-primary">Beli Sekarang</a>
+    </div>
+  </div>
+
+  <!-- Produk 2 -->
+  <div class="product-card">
+    <figure class="product-image">
+      <img src="./assets/images/foto.png" alt="Smart Water Quality Meter">
+    </figure>
+    <div class="product-info">
+      <h3 class="product-title">Smart Water Quality Meter</h3>
+      <p class="product-desc">Pantau pH, suhu, salinitas, ORP, TDS & lainnya secara realtime via WiFi.</p>
+      <p class="product-price">Rp 1.275.000</p>
+      <a href="https://shopee.co.id/product/15944192/24743758296" target="_blank" class="btn btn-primary">Beli Sekarang</a>
+    </div>
+  </div>
+
+  <!-- Produk 3 -->
+  <div class="product-card">
+    <figure class="product-image">
+      <img src="./assets/images/foto.png" alt="Underwater Camera Monitor 4.3inch">
+    </figure>
+    <div class="product-info">
+      <h3 class="product-title">Underwater Camera 4.3"</h3>
+      <p class="product-desc">Kamera tahan air resolusi tinggi, cocok untuk memantau dasar kolam budidaya.</p>
+      <p class="product-price">Rp 3.220.500</p>
+      <a href="https://www.tokopedia.com/bosbintang/kamera-pancing-underwater-4-3" target="_blank" class="btn btn-primary">Beli Sekarang</a>
+    </div>
+  </div>
+
+  <!-- Produk 4 -->
+  <div class="product-card">
+    <figure class="product-image">
+      <img src="./assets/images/foto.png" alt="WiFi Solar Auto Feeder">
+    </figure>
+    <div class="product-info">
+      <h3 class="product-title">WiFi Solar Auto Feeder</h3>
+      <p class="product-desc">Feeder otomatis tenaga surya dengan kontrol jarak jauh via WiFi & aplikasi.</p>
+      <p class="product-price">Rp 6.114.528</p>
+      <a href="https://www.tokopedia.com/allsistem/solar-fish-feeder-automatic-feeding-smart-wifi" target="_blank" class="btn btn-primary">Beli Sekarang</a>
+    </div>
+  </div>
+
+</div>
+
+</div>
+</section>
+
+
+      <!-- 
+      - BLOG
+    -->
+
+    <section class="latest-news" id="blog">
+      <div class="container">
+        <h2 class="h2 section-title">Berita & Wawasan Terbaru</h2>
+        <p class="section-subtitle">Update terkini seputar perikanan budidaya, teknologi, dan peluang bisnis bersama FinTerra.</p>
+
+        <div class="news-grid">
+          <!-- Berita Akuakultur -->
+          <div class="news-card">
+            <figure class="news-image">
+              <img src="./assets/images/Berita Akuakultur Terbaru.jpg" alt="Berita Akuakultur">
+            </figure>
+            <div class="news-info">
+              <p class="news-meta">
+                <span>
+                  <ion-icon name="calendar-outline"></ion-icon> April 10, 2025
+                </span>
+                <span>
+                  <ion-icon name="person-outline"></ion-icon> Admin
+                </span>
+              </p>
+              <h3 class="news-title">Berita Akuakultur Terbaru</h3>
+              <p class="news-desc">Pantau perkembangan regulasi dan tren pasar perikanan budidaya di Indonesia dan global.</p>
+              <a href="#" class="btn btn-outline">Selengkapnya <ion-icon name="arrow-forward-outline"></ion-icon></a>
+            </div>
+          </div>
+
+          <!-- Teknologi Budidaya -->
+          <div class="news-card">
+            <figure class="news-image">
+              <img src="./assets/images/Teknologi-Sistem-Resirkulasi-mollyjaya.id_.webp" alt="Teknologi Budidaya Terkini">
+            </figure>
+            <div class="news-info">
+              <p class="news-meta">
+                <span>
+                  <ion-icon name="calendar-outline"></ion-icon> April 10, 2025
+                </span>
+                <span>
+                  <ion-icon name="person-outline"></ion-icon> Admin
+                </span>
+              </p>
+              <h3 class="news-title">Teknologi Budidaya Terkini</h3>
+              <p class="news-desc">Kenali perangkat IoT, sensor kualitas air, dan sistem otomatisasi terbaru untuk tambak pintar.</p>
+              <a href="#" class="btn btn-outline">Selengkapnya <ion-icon name="arrow-forward-outline"></ion-icon></a>
+            </div>
+          </div>
+
+          <!-- Peluang Bisnis -->
+          <div class="news-card">
+            <figure class="news-image">
+              <img src="./assets/images/Peluang-Usaha-Budidaya-Ikan-Koi-Dan-Analisa-Usahanya.jpg" alt="Peluang Bisnis Perikanan">
+            </figure>
+            <div class="news-info">
+              <p class="news-meta">
+                <span>
+                  <ion-icon name="calendar-outline"></ion-icon> April 10, 2025
+                </span>
+                <span>
+                  <ion-icon name="person-outline"></ion-icon> Admin
+                </span>
+              </p>
+              <h3 class="news-title">Peluang Bisnis Perikanan</h3>
+              <p class="news-desc">Eksplorasi kemitraan, ekspor hasil panen, dan ide usaha dari UMKM hingga korporasi.</p>
+              <a href="#" class="btn btn-outline">Selengkapnya <ion-icon name="arrow-forward-outline"></ion-icon></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+      
+
+
+
+
+      <!-- 
+        - CONTACT
+      -->
+
+      <section class="contact" id="contact">
+        <div class="container">
+
+          <h2 class="h2 section-title">Contact Us</h2>
+
+          <p class="section-text">
+            Et harum quidem rerum facilis est et expedita distinctio nam libero tempore cum soluta nobis eligendi
+            cumque.
+          </p>
+
+          <div class="contact-wrapper">
+
+            <form action="" class="contact-form">
+
+              <div class="wrapper-flex">
+
+                <div class="input-wrapper">
+                  <label for="name">Name*</label>
+
+                  <input type="text" name="name" id="name" required placeholder="Enter Your Name" class="input-field">
+                </div>
+
+                <div class="input-wrapper">
+                  <label for="emai">Email*</label>
+
+                  <input type="text" name="email" id="email" required placeholder="Enter Your Email"
+                    class="input-field">
+                </div>
+
+              </div>
+
+              <label for="message">Message*</label>
+
+              <textarea name="message" id="message" required placeholder="Type Your Message"
+                class="input-field"></textarea>
+
+              <button type="submit" class="btn btn-primary">
+                <span>Send Message</span>
+
+                <ion-icon name="paper-plane-outline"></ion-icon>
+              </button>
+
+            </form>
+
+            <ul class="contact-list">
+
+              <li>
+                <a href="mailto:support@website.com" class="contact-link">
+                  <ion-icon name="mail-outline"></ion-icon>
+
+                  <span>: support@website.com</span>
+                </a>
+              </li>
+
+              <li>
+                <a href="#" class="contact-link">
+                  <ion-icon name="globe-outline"></ion-icon>
+
+                  <span>: www.website.com</span>
+                </a>
+              </li>
+
+              <li>
+                <a href="tel:+0011234567890" class="contact-link">
+                  <ion-icon name="call-outline"></ion-icon>
+
+                  <span>: (+001) 123 456 7890</span>
+                </a>
+              </li>
+
+              <li>
+                <div class="contact-link">
+                  <ion-icon name="time-outline"></ion-icon>
+
+                  <span>: 9:00 AM - 6:00 PM</span>
+                </div>
+              </li>
+
+              <li>
+                <a href="#" class="contact-link">
+                  <ion-icon name="location-outline"></ion-icon>
+
+                  <address>: 1644 Deer Ridge Drive Rochelle Park, NJ 07662</address>
+                </a>
+              </li>
+
+            </ul>
+
+          </div>
+
+        </div>
+      </section>
+
+    </article>
+  </main>
+
+
+
+
+
+  <!-- 
+    - FOOTER
+  -->
+
+  <footer>
+
+    <div class="footer-top">
+      <div class="container">
+
+        <div class="footer-brand">
+
+          <a href="#" class="logo">
+            <img src="./assets/images/logo-footer.svg" alt="Landio logo">
+          </a>
+
+          <p class="footer-text">
+            Cras ultricies mi eu turpis sit hendrerit fringilla vestibulum ante ipsum primis in faucibus ultrices
+            posuere cubilia.
+          </p>
+
+          <ul class="social-list">
+
+            <li>
+              <a href="#" class="social-link">
+                <ion-icon name="logo-facebook"></ion-icon>
+              </a>
+            </li>
+
+            <li>
+              <a href="#" class="social-link">
+                <ion-icon name="logo-twitter"></ion-icon>
+              </a>
+            </li>
+
+            <li>
+              <a href="#" class="social-link">
+                <ion-icon name="logo-instagram"></ion-icon>
+              </a>
+            </li>
+
+            <li>
+              <a href="#" class="social-link">
+                <ion-icon name="logo-linkedin"></ion-icon>
+              </a>
+            </li>
+
+          </ul>
+
+        </div>
+
+        <div class="footer-link-box">
+
+          <ul class="footer-list">
+
+            <li>
+              <p class="footer-item-title">ABOUT US</p>
+            </li>
+
+            <li>
+              <a href="#" class="footer-link">Works</a>
+            </li>
+
+            <li>
+              <a href="#" class="footer-link">Strategy</a>
+            </li>
+
+            <li>
+              <a href="#" class="footer-link">Releases</a>
+            </li>
+
+            <li>
+              <a href="#" class="footer-link">Press</a>
+            </li>
+
+            <li>
+              <a href="#" class="footer-link">Mission</a>
+            </li>
+
+          </ul>
+
+          <ul class="footer-list">
+
+            <li>
+              <p class="footer-item-title">CUSTOMERS</p>
+            </li>
+
+            <li>
+              <a href="#" class="footer-link">Tranding</a>
+            </li>
+
+            <li>
+              <a href="#" class="footer-link">Popular</a>
+            </li>
+
+            <li>
+              <a href="#" class="footer-link">Customers</a>
+            </li>
+
+            <li>
+              <a href="#" class="footer-link">Features</a>
+            </li>
+
+          </ul>
+
+          <ul class="footer-list">
+
+            <li>
+              <p class="footer-item-title">SUPPORT</p>
+            </li>
+
+            <li>
+              <a href="#" class="footer-link">Developers</a>
+            </li>
+
+            <li>
+              <a href="#" class="footer-link">Support</a>
+            </li>
+
+            <li>
+              <a href="#" class="footer-link">Customer Service</a>
+            </li>
+
+            <li>
+              <a href="#" class="footer-link">Get Started</a>
+            </li>
+
+            <li>
+              <a href="#" class="footer-link">Guide</a>
+            </li>
+
+          </ul>
+
+        </div>
+
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container">
+        <p class="copyright">
+          &copy; 2022 <a href="">codewithsadee</a>. All Right Reserved
+        </p>
+      </div>
+    </div>
+
+  </footer>
+
+
+
+
+
+  <!-- 
+    - custom js link
+  -->
+  <script src="./assets/js/script.js"></script>
+
+  <!-- 
+    - ionicon link
+  -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+</body>
+
+</html>
